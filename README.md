@@ -19,7 +19,6 @@ Most of the programs use OpenMP for parallelization. Feel free to remove the rel
 
 Some comments of the codes refer to the sequential update as "Frank-Wolfe" (which might be rather confusing and misleading). The sequential update using the "++" operator can be viewed as a sequential, asynchronous version of the Frank-Wolfe algorithm. See the paper for more details.
 
-# Initial contributors
+# Initial Contributor
 
-Bintao Sun
-btsun@connect.hku.hk
+Bintao Sun (btsun@connect.hku.hk)
