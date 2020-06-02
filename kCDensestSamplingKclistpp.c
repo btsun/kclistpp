@@ -475,7 +475,7 @@ void Solve(Graph *g, const unsigned char k, unsigned num_iter, clock_t t0) {
     double edge_density = p_densest_subgraph->e * 2.0 / p_densest_subgraph->n / (p_densest_subgraph->n - 1);
     double density = (double)cnt_clique_in_densest_subgraph / p_densest_subgraph->n;
     double upper_bound = info.ub / sampling_prob / (1 - sqrt(6 * log(g->n) / info.ub));
-    printf("Approximate densest subgraph: %u nodes, %u edges, edge density = %f, k-clique density = %f, upper bound = %f. %ld microseconds.\n", p_densest_subgraph->n, p_densest_subgraph->e, edge_density, density, upper_bound, (t1 - t0) * 1000 / CLOCKS_PER_SEC);
+    printf("Approximate densest subgraph: %u nodes, %u edges, edge density = %f, k-clique density = %f, upper bound = %f. %ld milliseconds.\n", p_densest_subgraph->n, p_densest_subgraph->e, edge_density, density, upper_bound, (t1 - t0) * 1000 / CLOCKS_PER_SEC);
     free(p_densest_subgraph);
     //fprintf(ofp, "%u\t%u\t%u\t%.12f\t%.12f\t%ld\n", T, info.n, info.m, info.density, info.ub, t1 - t0);
     fflush(stdout);

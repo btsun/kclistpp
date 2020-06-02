@@ -390,7 +390,7 @@ void CDF_Main(unsigned char k, Graph *g, unsigned num_iter, char *output_file_na
       rho_tentative[i] = 0;
     DensestSubsetInfo info = CDF_FindDensestSubset(g, k, T);
     clock_t t1 = clock();
-    printf("Approximate densest subgraph: %u nodes, %u edges, edge density = %f, k-clique density = %f, upper bound = %f. %ld microseconds.\n", info.n, info.m, info.m * 2.0 / info.n / (info.n - 1), info.density, info.ub, (t1 - t0) * 1000 / CLOCKS_PER_SEC);
+    printf("Approximate densest subgraph: %u nodes, %u edges, edge density = %f, k-clique density = %f, upper bound = %f. %ld milliseconds.\n", info.n, info.m, info.m * 2.0 / info.n / (info.n - 1), info.density, info.ub, (t1 - t0) * 1000 / CLOCKS_PER_SEC);
     // fprintf(ofp, "%u\t%u\t%u\t%.12f\t%.12f\t%ld\n", T, info.n, info.m, info.density, info.ub, (t1 - t0) * 1000 / CLOCKS_PER_SEC);
     fflush(stdout);
   }
